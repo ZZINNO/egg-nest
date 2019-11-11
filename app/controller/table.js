@@ -31,6 +31,7 @@ class TableController extends Controller {
                     this.ctx.status = 200;
                 },
                     err => {
+                        err.sql = boom
                         this.ctx.body = err;
                         this.ctx.status = 500;
                     });
@@ -64,6 +65,7 @@ class TableController extends Controller {
                     this.ctx.status = 200;
                 },
                     err => {
+                        err.sql = boom
                         this.ctx.body = err;
                         this.ctx.status = 500;
                     });
@@ -93,6 +95,7 @@ class TableController extends Controller {
                         this.ctx.status = 200;
                     },
                         err => {
+                            err.sql = boom
                             this.ctx.body = err;
                             this.ctx.status = 500;
                         });
@@ -126,6 +129,7 @@ class TableController extends Controller {
                         this.ctx.status = 200;
                     },
                         err => {
+                            err.sql = boom
                             this.ctx.body = err;
                             this.ctx.status = 500;
                         });

@@ -84,7 +84,14 @@ GET /api/v1/database_config/schema_name/table_name
 | limit     | (选填)数字                             | /api/v1/dev/public/order?limit=1                             | SELECT * FROM schema_name.table_name LIMIT 1                 |
 | offset    | (选填)数字                             | /api/v1/dev/public/order?offset=1                            | SELECT * FROM schema_name.table_name OFFSET 1                |
 
+eg:  
+    GET http://ip:port/api/v1/database_config/schema_name/table_name?where=description$=.'宫保鸡丁配⽶饭'&orderby=description&limit=2&offset=1
 
+    return：
+    [
+        {"orderid":233,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"},
+        {"orderid":234,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"}
+    ]
 
 ## 增：
 
@@ -95,9 +102,15 @@ POST /api/v1/database_config/schema_name/table_name
 
 | 名称 | 描述                             | 栗子                                                         | sql                                                          |
 | ---- | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 字段 | 值(raw 或 x-www-from-urlencoded) | {"orderid":233,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭",} | INSERT INTO schema_name.table_name (orderid, subject, description) VALUES ('233', '外卖餐品', '宫保鸡丁配⽶饭') |
+| 字段 | 值(raw 或 x-www-from-urlencoded) | {"orderid":233,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"} | INSERT INTO schema_name.table_name (orderid, subject, description) VALUES ('233', '外卖餐品', '宫保鸡丁配⽶饭') |
 
+eg:
+    POST http://ip:port/api/v1/database_config/schema_name/table_name
+    
+    body:
+    {"orderid":234,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"}
 
+    return:
 
 ## 删：
 
