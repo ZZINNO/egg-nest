@@ -1,10 +1,10 @@
 ## EGG-NEST
 
-jrest是学习postgrest的逻辑和模式，以纯js实现的后端Restful-Api自动生成框架 用于快速生成项目后端，实现非常简易的项目效果演示等用途
+egg-nest是学习postgrest的逻辑和模式，以纯js实现的后端Restful-Api自动生成框架 用于快速生成项目后端，实现非常简易的项目效果演示等用途
 
 #### （不建议用在生产环境，用golang的女朋友框架是更好更完整的选择）
 
-jrest基于egg开发，代码很简单，进一步开发也很方便
+egg-nest基于egg开发，代码很简单，进一步开发也很方便
 （比如产品经理设想了一个功能，数据结构一设计，直接拿jrest一套，一个完整的功能演示就出现了，可能半小时就能看到想要的效果，然后进一步扩宽产品和业务设计的思路和）
 
 ## 使用
@@ -21,15 +21,15 @@ yarn dev
 
 目前已经实现的功能：
 + 多数据库配置管理
-    在sqlconfig.json里面写对应的配置，可以有多个配置
+    在sql/sqlconfig.json里面写对应的配置，可以有多个配置
 ```json
 {
     "sql":{
-        "host":"pgsql.jrest.com",
+        "host":"pgsql.egg-nest.com",
         "port":65432,
-        "user":"jrest",
-        "password":"123456jrest",
-        "database":"test"
+        "user":"egg-nest",
+        "password":"123456egg-nest",
+        "database":"egg-nest"
     }
 }
 ```
@@ -38,17 +38,17 @@ yarn dev
 ```json
 {
     "sql":{
-        "host":"pgsql.jrest.com",
+        "host":"pgsql.egg-nest.com",
         "port":65432,
-        "user":"jrest",
-        "password":"123456jrest",
+        "user":"egg-nest",
+        "password":"123456egg-nest",
         "database":"test"
     },
     "dev":{
-        "host":"pgsql.jrest.com",
+        "host":"pgsql.egg-nest.com",
         "port":65432,
-        "user":"jrest",
-        "password":"123456jrest",
+        "user":"egg-nest",
+        "password":"123456egg-nest",
         "database":"test"
     }
 }
