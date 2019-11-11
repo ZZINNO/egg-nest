@@ -26,7 +26,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --title=egg-server-eggnest",
+    "start": "egg-scripts start --daemon --title=egg-server-eggnest",
     "stop": "egg-scripts stop --title=egg-server-eggnest",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
@@ -35,7 +35,8 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "docker":"egg-scripts start --title=egg-server-eggnest"
   },
   "ci": {
     "version": "10"
