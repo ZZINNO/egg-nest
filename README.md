@@ -19,6 +19,12 @@ yarn dev
 #更多命令参照package.json
 ```
 
+## docker中使用
+```bash
+docker run --name egg-nest -p 7001:7001 -v /your/config:/eggnest/sql -d loveward/egg-nest:latest
+# config的写法在下面有 ↓
+```
+
 目前已经实现的功能：
 + 多数据库配置管理
     在sql/sqlconfig.json里面写对应的配置，可以有多个配置
