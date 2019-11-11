@@ -105,7 +105,7 @@ DEL /api/v1/database_config/schema_name/table_name
 PUT /api/v1/database_config/schema_name/table_name
 |名称|描述|栗子|sql|
 |----|-----|----|----|
-|where|(必填)字段$=.值|/api/v1/dev/public/order?where=orderid$=.'233'|
+|where|(必填)字段$=.值|/api/v1/dev/public/order?where=orderid$=.'233'||
 |set|(必填)字段$=.值|/api/v1/dev/public/order?where=description$=.'鸡腿配面'|UPDATE schema_name.table_name SET description='鸡腿配面' WHERE orderid='233'|
 
 
