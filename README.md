@@ -7,6 +7,8 @@ egg-nest是学习postgrest的逻辑和模式，以纯js实现的后端Restful-Ap
 egg-nest基于egg开发，代码很简单，进一步开发也很方便
 （比如产品经理设想了一个功能，数据结构一设计，直接拿egg-nest一套，一个完整的功能演示就出现了，可能半小时就能看到想要的效果，然后进一步扩宽产品和业务设计的思路和）
 
+已经设置上传限制大小为2M,可以在/config/config.default.js里面修改。
+
 ## 使用
 安装了yarn之后
 ```bash
