@@ -117,9 +117,9 @@ class TableController extends Controller {
     async delete() {
         if (this.ctx.params.schema != '' && this.ctx.params.table != '') {
             //let boom = `SELECT * FROM ${this.ctx.params.schema}.${this.ctx.params.table}`;
-            if (this.ctx.request.body.where != undefined) {
+            if (this.ctx.request.query.where != undefined) {
                 let boom = `DELETE FROM ${this.ctx.params.schema}.${this.ctx.params.table}`
-                let field = this.ctx.request.body.where.split("$")
+                let field = this.ctx.request.query.where.split("$")
                 let value = field[1].split(".")
                 boom = `${boom} WHERE ${field[0]} ${value[0]} ${value[1]}`
                 this.app.logger.info(boom)

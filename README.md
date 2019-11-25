@@ -104,7 +104,7 @@ POST /api/v1/database_config/schema_name/table_name
 
 | 名称 | 描述                             | 栗子                                                         | sql                                                          |
 | ---- | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 字段 | 值(raw 或 x-www-from-urlencoded) | {"orderid":233,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"} | INSERT INTO schema_name.table_name (orderid, subject, description) VALUES ('233', '外卖餐品', '宫保鸡丁配⽶饭') |
+| 字段 | 值(json 或 x-www-from-urlencoded) | {"orderid":233,"subject": "外卖餐品","description": "宫保鸡丁配⽶饭"} | INSERT INTO schema_name.table_name (orderid, subject, description) VALUES ('233', '外卖餐品', '宫保鸡丁配⽶饭') |
 
 eg:
     POST http://ip:port/api/v1/database_config/schema_name/table_name
