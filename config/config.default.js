@@ -37,8 +37,8 @@ module.exports = appInfo => {
   config.bodyParser = {
     enable: true,
     encoding: 'utf8',
-    formLimit: '2000kb',
-    jsonLimit: '2000kb',
+    formLimit: '5000kb',
+    jsonLimit: '5000kb',
     strict: true,
     // @see https://github.com/hapijs/qs/blob/master/lib/parse.js#L8 for more options
     queryString: {
